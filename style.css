@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #efefef;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/Harman_1.png);
+    background-size: cover;
+    background-position-y: 0%;
+    background-attachment: fixed;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 280px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #efefef;
+    text-decoration: 18px;
+    font-size: 18px;
+    letter-spacing: 0.13em;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #9d00ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text span {
+    background: linear-gradient(to left, #8700db, #e601ff);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* ------------Center alignment------------ */
+
+.center {
+    display: block;
+    margin-left: -11em;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* -----------------About---------------- */
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    margin-top: 130px;
+    margin-left: 35px;
+    flex-basis: 37%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    margin-top: 290px;
+    flex-basis: 56%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #efefef;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #6d00b1;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b342fa;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* --------------services----------- */
+
+#services {
+    padding: 30px 0;
+
+    h1 {
+        margin-top: 60px;
+    }
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover {
+    background: #780085d4;
+    transform: translateY(-10px);
+}
+
+/* --------------Portfolio--------------- */
+
+#portfolio {
+    padding: 50px;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    margin-top: 50px;
+}
+
+.work {
+    position: relative;
+    overflow: hidden;
+    /* Ensures any overflowing content is clipped */
+    border-radius: 10px;
+    height: auto;
+    /* Allows the height to adapt to the image's aspect ratio */
+    max-height: 100%;
+    /* Ensures the container doesn't exceed a certain height */
+}
+
+.work-img {
+    width: 100%;
+    height: auto;
+    /* Maintains the image's aspect ratio */
+    display: block;
+    object-fit: contain;
+    /* Ensures the entire image fits within the container */
+    object-position: center;
+    /* Centers the image */
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(0, 0, 0, 0.6, #b342fa);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: -5px 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 900;
+    margin-left: 7px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ff39bd, #e600ff);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border: 3px solid #080808;
+    padding: 5px;
+}
+
+.work:hover img {
+    transform: scaleX(1.1);
+}
+
+.work:hover .layer {
+    height: 50%;
+}
+
+.work:hover img {
+    opacity: 50%;
+}
+
+/* ------------------Contact------------------- */
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #e600ff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #870682;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #e600ff;
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #000;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px 8px;
+    color: #faf9f6;
+    font-size: 18px;
+    border: 6px;
+}
+
+form btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harman Kaur</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2d4de8505a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo_1.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Commerce Student & Design Aspirant</p>
+                <h1>Hi, I'm <span>Harman <br>Kaur</span> from Delhi NCR</h1>
+            </div>
+        </div>
+
+        <!-- -----------------About---------------- -->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img class="center" src="images/Harman_2.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I'm a 17 year old Commerce student from Delhi NCR with a
+                            passion for design. My experiences in public
+                            relations and management complement my talents in sketching, painting, and
+                            real-life drawing. I aspire
+                            to merge design with commerce, creating impactful work.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Design</span><br>Sketching, Painting, Real-life Drawing</li>
+                                <li><span>Public Relations</span><br>Event Planning, Media Relations</li>
+                                <li><span>Management</span><br>Project Coordination, Team Leadership</li>
+                                <li><span>Communication</span><br>Effective Speaking, Writing, Negotiation</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Winning Best Delegate</span><br>UNCSW at MrResilience’23</li>
+                                <li><span>Selected as Delegate</span><br>MRMUN’22, Vezolution’23, MrResilience’23 &
+                                    MRMUN’24</li>
+                                <li><span>Participating in Organizing Commitee</span><br>MrResilience MUN 2024</li>
+                                <li><span>Participating in Commercium’23 Exhibition</span><br>Model making in MRIS CW
+                                </li>
+                                <li><span>Board of Directors</span><br>Sharbate (Legally registered lemonade company)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2025</span><br>12th class Commerce stream from MRIS CW</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------Services---------------- -->
+
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <h2>Logo Design</h2>
+                        <p>Crafting Memorable Brand Identities</p>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <h2>MUN Guidance</h2>
+                        <p>Mastering the Art of Diplomacy: MUN Coaching</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------Portfolio---------------- -->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work1.jpg" alt="Work images 1">
+                        <div class="layer">
+                            <h3>Human HE<b>ART</b></h3>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="images/work2.jpg" alt="Work images 2">
+                        <div class="layer">
+                            <h3>Butterfly-eyed Girl</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------Contact---------------- -->
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-regular fa-envelope"></i> harman04077@gmail.com</p>
+
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Name">
+                            <input type="text" name="Email" placeholder="Email ID">
+                            <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link")
+                }
+
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+
+</body>
+
+</html>
